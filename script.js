@@ -20,7 +20,7 @@ function showHint() {
     // Show hint text
     hintText.style.display = 'block';
 
-    // Show and animate the hint image inside the yellow box
+    // Show and animate the hint image
     hintImage.classList.add('hint-visible');
 }
 
