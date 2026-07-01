@@ -10,21 +10,40 @@
 
 <div id="login" class="stationery">
     <h3>For You</h3>
+
     <label for="password">Password</label>
     <input type="text" id="password" maxlength="10" placeholder="">
+
     <button onclick="checkPassword()">Unlock</button>
-    <button style="background:none; text-decoration:underline; font-size:12px; color:#666;" onclick="showHint()">Hint?</button>
-    <p id="hint-text">Hint: The date we met (MM/DD/YYYY)</p>
+    <button
+        class="hint-button"
+        onclick="showHint()"
+    >
+        Hint?
+    </button>
+
+    <p id="hint-text">
+        Hint: The date we met (MM/DD/YYYY)
+    </p>
+
+    <!-- Hint image inside the yellow letter box -->
+    <img
+        id="hint-image"
+        src="hint-photo.jpg"
+        alt="Hint related to the date we met"
+    >
 </div>
 
 <div id="content" class="stationery">
     <div id="dear-area"></div>
+
     <div id="body-area">
         I am writing this because I don’t want the silence to grow between us. 
         I believe what we have is worth fighting for. Even when the path seems difficult, 
         I am ready to do the work to be the person you deserve. 
         Please, let’s have a conversation to start over.
     </div>
+
     <div id="closing-area"></div>
 </div>
 

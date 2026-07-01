@@ -14,7 +14,14 @@ input.addEventListener('input', (e) => {
 });
 
 function showHint() {
-    document.getElementById('hint-text').style.display = 'block';
+    const hintText = document.getElementById('hint-text');
+    const hintImage = document.getElementById('hint-image');
+
+    // Show hint text
+    hintText.style.display = 'block';
+
+    // Show and animate the hint image
+    hintImage.classList.add('hint-visible');
 }
 
 function checkPassword() {
