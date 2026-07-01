@@ -1,17 +1,3 @@
-/* Mobile-first layout */
-* { box-sizing: border-box; }
-
-body { 
-    background-color: #CCCCFF;
-    font-family: 'Times New Roman', serif;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 10px;
-}
-
 /* Yellow envelope box */
 .stationery {
     background-color: #FFFACD;
@@ -27,79 +13,7 @@ body {
     align-items: center;
 }
 
-.stationery::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background: linear-gradient(135deg, #FFFACD 50%, #f0e68c 50%);
-    border-bottom: 2px solid rgba(0,0,0,0.05);
-}
-
-/* Letter content areas */
-#content {
-    display: none;
-    text-align: left;
-    width: 100%;
-    align-items: flex-start;
-}
-
-#dear-area {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #333;
-    min-height: 1.5em;
-    margin-bottom: 10px;
-    width: 100%;
-}
-
-#body-area {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #333;
-    margin-top: 10px;
-    opacity: 0;
-    transition: opacity 2s ease-in;
-    width: 100%;
-}
-
-#closing-area {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #333;
-    min-height: 3em;
-    margin-top: 15px;
-    width: 100%;
-}
-
-/* Form controls */
-input {
-    padding: 12px;
-    font-size: 18px;
-    width: 90%;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-
-label {
-    font-weight: bold;
-    color: #555;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background: #CCCCFF;
-    border: none;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* Hint text uses inline display:none in HTML; extra styling here */
+/* Hint text styling (visibility controlled via inline display:none + JS) */
 #hint-text {
     color: #666;
     margin-top: 10px;
@@ -107,20 +21,20 @@ button {
     font-size: 0.85em;
 }
 
-/* Hint image hidden initially; sized to fit inside the envelope */
+/* Hint image: START HIDDEN, scaled to envelope, auto height */
 #hint-image {
-    display: none;
+    display: none;          /* key: hide at initial load */
     margin-top: 10px;
-    max-width: 100%;
-    height: auto;
+    max-width: 100%;        /* fit inside yellow box width */
+    height: auto;           /* maintain aspect ratio */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* Fade-in helper class for smooth appearance */
 .hint-visible {
-    display: block;
-    animation: hintFadeIn 0.8s ease-in forwards;
+    display: block;         /* becomes visible */
+    animation: hintFadeIn 0.5s ease-in forwards;
 }
 
 @keyframes hintFadeIn {
