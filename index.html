@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>For You</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
 <div id="login" class="stationery">
     <h3>For You</h3>
 
@@ -16,7 +6,7 @@
 
     <button onclick="checkPassword()">Unlock</button>
 
-    <!-- Hint? link styled as underlined text, not a box -->
+    <!-- Hint? link: underlined text, not a box -->
     <button
         onclick="showHint()"
         style="background:none; border:none; padding:0; margin-top:8px;
@@ -25,31 +15,15 @@
         Hint?
     </button>
 
-    <!-- Hint text and image: both hidden initially -->
+    <!-- Hint text: hidden initially -->
     <p id="hint-text" style="display:none;">
         Hint: The date we met (MM/DD/YYYY)
     </p>
 
+    <!-- Hint image: hidden initially, small and inside the yellow box -->
     <img
         id="hint-image"
         src="hint-photo.jpeg"
         alt="Hint related to the date we met"
     >
 </div>
-
-<div id="content" class="stationery">
-    <div id="dear-area"></div>
-
-    <div id="body-area">
-        I am writing this because I don’t want the silence to grow between us. 
-        I believe what we have is worth fighting for. Even when the path seems difficult, 
-        I am ready to do the work to be the person you deserve. 
-        Please, let’s have a conversation to start over.
-    </div>
-
-    <div id="closing-area"></div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
