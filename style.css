@@ -1,7 +1,5 @@
 /* Mobile-first layout */
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body { 
     background-color: #CCCCFF;
@@ -17,11 +15,11 @@ body {
 /* Yellow envelope box */
 .stationery {
     background-color: #FFFACD;
-    padding: 32px 20px;
+    padding: 40px 20px;
     border: 1px solid #dcdcdc;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     width: 100%;
-    max-width: 420px;        /* slightly narrower for phones */
+    max-width: 500px;
     text-align: center;
     position: relative;
     display: flex;
@@ -35,7 +33,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 36px;
+    height: 40px;
     background: linear-gradient(135deg, #FFFACD 50%, #f0e68c 50%);
     border-bottom: 2px solid rgba(0,0,0,0.05);
 }
@@ -78,8 +76,8 @@ body {
 
 /* Form controls */
 input {
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 18px;
     width: 90%;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -92,8 +90,8 @@ label {
 }
 
 button {
-    padding: 8px 18px;
-    font-size: 14px;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
     background: #CCCCFF;
     border: none;
@@ -101,25 +99,15 @@ button {
     margin-top: 10px;
 }
 
-/* Hint button styling */
-.hint-button {
-    background: none;
-    text-decoration: underline;
-    font-size: 12px;
-    color: #666;
-    margin-top: 6px;
-}
-
-/* Hint text and image */
+/* Hint text uses inline display:none in HTML; extra styling here */
 #hint-text {
-    display: none;
     color: #666;
     margin-top: 10px;
     font-style: italic;
     font-size: 0.85em;
 }
 
-/* Image is hidden by default, sized for phones */
+/* Hint image hidden initially; sized to fit inside the envelope */
 #hint-image {
     display: none;
     margin-top: 10px;
@@ -129,7 +117,7 @@ button {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Fade-in class for smooth appearance */
+/* Fade-in helper class for smooth appearance */
 .hint-visible {
     display: block;
     animation: hintFadeIn 0.8s ease-in forwards;
@@ -138,22 +126,4 @@ button {
 @keyframes hintFadeIn {
     from { opacity: 0; transform: translateY(4px); }
     to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Small-screen tweaks (iPhone-friendly) */
-@media (max-width: 480px) {
-    .stationery {
-        padding: 24px 16px;
-        max-width: 360px;
-    }
-
-    input {
-        font-size: 15px;
-    }
-
-    #body-area,
-    #dear-area,
-    #closing-area {
-        font-size: 1em;
-    }
 }
