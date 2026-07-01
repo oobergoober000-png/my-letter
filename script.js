@@ -15,13 +15,13 @@ input.addEventListener('input', (e) => {
 
 function showHint() {
     const hintText = document.getElementById('hint-text');
-    const hintImage = document.getElementById('hint-image');
+    const hintWrapper = document.getElementById('hint-image-wrapper');
 
     // Show hint text
     hintText.style.display = 'block';
 
-    // Show and animate the hint image
-    hintImage.classList.add('hint-visible');
+    // Show image wrapper (scaled image inside envelope)
+    hintWrapper.style.display = 'block';
 }
 
 function checkPassword() {
