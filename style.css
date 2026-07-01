@@ -152,3 +152,10 @@ button {
         font-size: 1em;
     }
 }
+/* Prevent selecting/copying text inside the letter content */
+#content, #body-area, #dear-area, #closing-area {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+    user-select: none;         /* Chrome/Opera/modern browsers */
+}
