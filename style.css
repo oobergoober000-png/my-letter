@@ -40,6 +40,12 @@ body {
     border-bottom: 2px solid rgba(0,0,0,0.05);
 }
 
+/* Inner letter content: extra top padding to clear the decal */
+#letter-inner {
+    padding-top: 48px;          /* push Dear Audrey below the ribbon */
+    width: 100%;
+}
+
 /* Letter content areas */
 #content {
     display: none;
@@ -130,6 +136,10 @@ button {
     .stationery {
         padding: 28px 16px;
         max-width: 380px;
+    }
+
+    #letter-inner {
+        padding-top: 40px;      /* slightly smaller top padding on phones */
     }
 
     input {
