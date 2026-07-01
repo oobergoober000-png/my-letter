@@ -15,21 +15,24 @@
     <input type="text" id="password" maxlength="10" placeholder="">
 
     <button onclick="checkPassword()">Unlock</button>
+
+    <!-- Hint? link styled as underlined text, not a box -->
     <button
-        class="hint-button"
         onclick="showHint()"
+        style="background:none; border:none; padding:0; margin-top:8px;
+               text-decoration:underline; font-size:12px; color:#666; cursor:pointer;"
     >
         Hint?
     </button>
 
-    <p id="hint-text">
+    <!-- Hint text and image: both hidden initially -->
+    <p id="hint-text" style="display:none;">
         Hint: The date we met (MM/DD/YYYY)
     </p>
 
-    <!-- Hint image inside the yellow letter box -->
     <img
         id="hint-image"
-        src="hint-photo.jpg"
+        src="hint-photo.jpeg"
         alt="Hint related to the date we met"
     >
 </div>
