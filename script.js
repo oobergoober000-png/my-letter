@@ -1,5 +1,5 @@
 const dearContent = "Dear Audrey,";
-const closingContent = "\nLove,\nDan";
+const closingContent = "\nLove,\nDaniel";
 
 const input = document.getElementById('password');
 
