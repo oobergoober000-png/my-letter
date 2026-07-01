@@ -1,4 +1,4 @@
-const dearContent = "Dear xxx,";
+const dearContent = "Dear Audrey,";
 const closingContent = "\nWith all my love,\n[Your Name]";
 
 const input = document.getElementById('password');
